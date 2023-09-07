@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+button:hover,
+button:focus,
+input:focus,
+input:focus {
+  outline: none;
+}
+
+body{
+  font-family: 'Cairo', sans-serif;
+}
