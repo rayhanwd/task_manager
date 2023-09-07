@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import InputField from "../inputFields/inputField";
 import TextAreaField from "../inputFields/textareaField";
 import SelectField from "../inputFields/selectField";
+import { AiOutlineClose } from "../../icons/index";
 
 const CreateTaskFormForTeam = ({ updateModal }) => {
   const priorityOptions = [
@@ -31,13 +32,17 @@ const CreateTaskFormForTeam = ({ updateModal }) => {
   const [teamName, setteamName] = useState(null);
 
   const [errors, setErrors] = useState({
-    teamName:"",
+    teamName: "",
     title: "",
     description: "",
     due_date: "",
     priority_level: "",
     label: "",
   });
+
+  const closeModal = () => {
+    updateModal();
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -54,7 +59,6 @@ const CreateTaskFormForTeam = ({ updateModal }) => {
     }
     setMember("");
   };
- 
 
   const validateForm = () => {
     const newErrors = {};
@@ -131,8 +135,13 @@ const CreateTaskFormForTeam = ({ updateModal }) => {
   }, []);
 
   return (
-    <div className="bg-white rounded shadow-lg relative w-2/5 mx-auto p-4 overflow-y-scroll z-50">
-      <h2 className="text-2xl font-bold mb-4">Create a Task for your team</h2>
+    <div className="bg-white rounded shadow-lg relative w-2/5 mx-auto p-4 overflow-y-scroll z-50 h-4/5">
+      <div className="flex items-center justify-between">
+        <h2 className="text-2xl font-bold mb-4">Create a Task for your team</h2>
+        <button onClick={() => closeModal()}>
+          <AiOutlineClose className="text-2xl"/>
+        </button>
+      </div>
       <form onSubmit={handleSubmit}>
         {!teamName && (
           <InputField

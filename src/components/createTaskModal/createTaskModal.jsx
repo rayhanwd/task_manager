@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import InputField from "../inputFields/inputField";
 import TextAreaField from "../inputFields/textareaField";
 import SelectField from "../inputFields/selectField";
+import { AiOutlineClose } from "react-icons/ai";
 
-const CreateTaskForm = ({ updateModal, team }) => {
+const CreateTaskForm = ({ updateModal }) => {
   const priorityOptions = [
     { value: "Low", label: "Low" },
     { value: "Medium", label: "Medium" },
@@ -35,6 +36,9 @@ const CreateTaskForm = ({ updateModal, team }) => {
     priority_level: "",
     label: "",
   });
+  const closeModal = () => {
+    updateModal();
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -51,7 +55,6 @@ const CreateTaskForm = ({ updateModal, team }) => {
     }
     setMember("");
   };
- 
 
   const validateForm = () => {
     const newErrors = {};
@@ -119,8 +122,13 @@ const CreateTaskForm = ({ updateModal, team }) => {
   };
 
   return (
-    <div className="bg-white rounded shadow-lg relative w-2/5 mx-auto p-4 overflow-y-scroll z-50">
-      <h2 className="text-2xl font-bold mb-4">Create a Task for your team</h2>
+    <div className="bg-white rounded shadow-lg relative w-2/5 mx-auto p-4 overflow-y-scroll z-50 h-4/5">
+      <div className="flex items-center justify-between">
+        <h2 className="text-2xl font-bold mb-4">Create a Task</h2>
+        <button onClick={() => closeModal()}>
+          <AiOutlineClose className="text-2xl" />
+        </button>
+      </div>
       <form onSubmit={handleSubmit}>
         <InputField
           name="title"

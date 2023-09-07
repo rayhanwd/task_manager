@@ -6,6 +6,7 @@ import {
   AiFillYoutube,
   AiFillGithub,
   AiFillLinkedin,
+  AiOutlineClose
 } from "react-icons/ai";
 
 export {
@@ -15,4 +16,5 @@ export {
   AiFillYoutube,
   AiFillGithub,
   AiFillLinkedin,
+  AiOutlineClose
 };

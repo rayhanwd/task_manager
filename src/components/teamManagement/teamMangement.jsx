@@ -52,7 +52,7 @@ const TeamManagement = () => {
       }
 
       setTasks(updatedTasks);
-      localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+      localStorage.setItem("taskTeams", JSON.stringify(updatedTasks));
       window.dispatchEvent(new Event("storage"));
       window.location.reload()
     }
