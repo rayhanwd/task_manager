@@ -82,7 +82,7 @@ const TodoTable = () => {
             </button>
           </div>
           <DragDropContext onDragEnd={onDragEnd}>
-            <table className="w-full leading-normal sm:w-auto md:w-auto">
+            <table className="min-w-full leading-normal">
               <thead>
                 <tr>
                   {labels.map((label) => (
