@@ -6,3 +6,4 @@
 4. Due Dates and Reminders: Users can set due dates for tasks and receive reminders to ensure they are completed on time. Reminders could be in the form of notifications or emails.
 5. Collaboration: Users can collaborate with others by assigning tasks, sharing task lists, and leaving comments or notes on tasks.
 6. Progress Tracking: Track the progress of tasks, including status updates, completion percentage, and time tracking.
+7. Analytics and Reports: Generate insights through analytics and reports on task completion rates, productivity trends, and more.
