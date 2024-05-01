@@ -1,3 +1,7 @@
+### Task management app
+
+With this app, user can manage their tasks. We can manage individual or team tasks
+=======
 # Task Management App
 ### Features
 1. Task Creation: Users can create tasks easily, including setting a title, description, due date, priority level, and tags.
